@@ -28,7 +28,7 @@
     <nav id="navbar">
         <div class="navbar__logo">
             <i class="fas fa-tools"></i>
-            <a href="#">Pis</a>
+            <a href="#">PIS</a>
         </div>
 
         <ul class="navbar__menu">
@@ -41,13 +41,13 @@
     </nav>
 
     <section id="home">
-        <img src="" alt="Pis profile" class="home__profile">
+        <img src="img/profile.png" alt="Pis profile" class="home__profile">
         <h1 class="home__title">안녕하세요, <br>밥값 하고 싶은 '프로그래머' 입니다.</h1>
-        <h3 class="home__discription">시작하기에 가장 완벽한 곳은 바로 지금 당신이 있는 그곳이다.</h3>
+        <h3 class="home__description">시작하기에 가장 완벽한 곳은 바로 지금 당신이 있는 그곳이다.</h3>
         <button class="home__contact">CONTACT ME</button>
     </section>
 
-    <section id="about">
+    <section id="about" class="section">
         <h1>About me</h1>
         <p>...</p>
         <div class="about__majors">
@@ -56,11 +56,11 @@
                 <div class="major__icon">
                     <i class="fab fa-html5"></i>
                 </div>
-                <div class="major__title">프론트-엔드</div>
-                <div class="major__discription">
+                <h2 class="major__title">Front-end</h2>
+                <h3 class="major__description">
                     HTML, CSS, JavaScript,
                     <br>React, Vue, Web APIs
-                </div>
+                </h3>
             </div>
 
             <!-- Back-end -->
@@ -68,19 +68,23 @@
                 <div class="major__icon">
                     <i class="fas fa-server"></i>
                 </div>
-                <div class="major__title">백-엔드</div>
-                <div class="major__discription"></div>
+                <h2 class="major__title">Back-end</h2>
+                <div class="major__description">
+                    Java, JavaScript
+                </div>
             </div>
         </div>
 
         <div class="about__school">
-            <img src="" alt="university" class="school__logo">
-            <p class="school__name">한라대학교</p>
-            <p class="school__major">컴퓨터 공학과 (Computer engineering)</p>
+            <img src="img/university-logo.png" alt="university" class="school__logo">
+            <div class="school__description">
+                <p class="school__name">한라대학교</p>
+                <p class="school__major">컴퓨터 공학과 (Computer engineering)</p>
+            </div>
         </div>
     </section>
 
-    <section id="skills">
+    <section id="skills" class="section">
         <h1>Skills</h1>
         <h2>Skills & Attributes</h2>
         <p>
@@ -125,7 +129,8 @@
             </div>
         </div>
     </section>
-    <section id="work">
+
+    <section id="work" class="section">
         <h1>My work</h1>
         <h3>Projects</h3>
         <div class="work__categories">
@@ -146,7 +151,8 @@
             </a> 
         </div>
     </section>
-    <seciton id="contact">
+
+    <seciton id="contact" class="section">
         <h1 class="contact__title">Let's talk</h1>
         <h2 class="contatic__email">altn0729@naver.com</h2>
         <div class="contact__links">
