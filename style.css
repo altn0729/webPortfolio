@@ -103,12 +103,20 @@ button {
 
 /* Navbar */
 #navbar {
+  position: fixed;
+  width: 100%;
   display: flex;
   justify-content: space-between;
-  background-color: var(--color-blue);
+  background-color: transparent;
   color: var(--color-white);
   align-items: center;
   padding: 16px;
+  transition: all var(--animation-duration) ease-in;
+}
+
+#navbar.navbar__background {
+  background-color: var(--color-blue);
+  padding: 12px;
 }
 
 .navbar__menu {
@@ -149,6 +157,7 @@ button {
   background: url("img/home-background.png") center/cover no-repeat;
   text-align: center;
   padding: 40px;
+  padding-top: 120px;
 }
 
 .home__profile {
