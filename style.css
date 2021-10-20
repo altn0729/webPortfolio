@@ -48,7 +48,11 @@ body {
   text-align: center;
   margin: auto;
   padding: 50px;
+}
+
+.section__container {
   max-width: 1200px;
+  margin: auto;
 }
 
 a {
@@ -227,4 +231,60 @@ button {
 
 .school__major {
   font-size: var(--font-micro);
+}
+
+#skills {
+  background-color: var(--color-yellow);
+}
+
+.skill {
+  margin: 12px;
+}
+
+.skillset {
+  display: flex;
+  background-color: var(--color-light-grey);
+  color: var(--color-light-white);
+  margin: 20px 0;
+}
+
+.skillset_title {
+  color: var(--color-white);
+}
+
+.skillset__left {
+  /* item 들의 크기를 자동으로 늘리거나 줄어들 수 있도록 flex-basis 사용 */
+  flex-basis: 60%;
+  background-color: var(--color-dark-grey);
+  padding: 20px 40px;
+}
+
+.skill__description {
+  display: flex;
+  justify-content: space-between;
+}
+
+.skill__bar {
+  width: 100%;
+  height: 3px;
+  background-color: var(--color-grey);
+}
+
+/* 여기서 지정할 경우 전부 지정이 돼 버리기 때문에 나중에 JSON 파일을 이용해 동적으로 변경할 것 */
+.skill__value {
+  height: 3px;
+  background-color: var(--color-orange);
+}
+
+.skillset__right {
+  flex-basis: 40%;
+}
+
+.tools {
+  background-color: var(--color-grey);
+}
+
+.tools,
+.etc {
+  padding: 20px;
 }
