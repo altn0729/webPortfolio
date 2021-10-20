@@ -4,6 +4,13 @@
 const navbar = document.querySelector('#navbar');
 const navbarHeight = navbar.getBoundingClientRect().height;
 
+const navbarMenu = document.querySelector('.navbar__menu');
+console.log(navbarMenu);
+
+const about = document.querySelector('#about');
+const aboutScrollY = about.offsetTop - 200;
+console.log(`aboutScrollY: ${aboutScrollY}`);
+
 document.addEventListener('scroll', () => {
     // console.log(`window.scrollY: ${window.scrollY}`);
     // console.log(`navbarHeight: ${navbarHeight}`);
@@ -13,4 +20,19 @@ document.addEventListener('scroll', () => {
     } else {
         navbar.classList.remove('navbar__background');
     }
+});
+
+navbarMenu.addEventListener('click', (event) => {
+    const target = event.target
+    const value = target.dataset.value;
+
+    // console.log(target);
+    // console.log(value);
+
+    if (value == null) {
+        return;
+    }
+
+    const scrollTo = document.querySelector(value);
+    scrollTo.scrollIntoView({behavior:'smooth', block:'center'});
 });
