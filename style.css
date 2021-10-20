@@ -10,6 +10,7 @@
   --color-light-grey: #7c7979;
   --color-blue: #73aace;
   --color-dark-blue: #417b9d;
+  --color-dark-real-blue: #000051;
   --color-yellow: #fff7d1;
   --color-orange: #feb546;
   --color-black: #000000;
@@ -388,4 +389,29 @@ button {
 .project:hover .project__description {
   transform: translateY(0px);
   opacity: 0.8;
+}
+
+#contact {
+  background-color: var(--color-blue);
+}
+
+.contact__title,
+.contact__email,
+.contact__rights {
+  color: var(--color-white);
+}
+
+.contact__title {
+  margin: 32px 0;
+}
+
+.contact__links {
+  font-size: var(--font-large);
+  margin: 24px 0;
+}
+
+.contact__links i:hover {
+  transform: scale(1.1);
+  color: var(--color-dark-real-blue);
+  transition: all var(--animation-duration) ease-in;
 }
