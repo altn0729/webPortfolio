@@ -38,11 +38,15 @@
             <li class="navbar__menu__item">My work</li>
             <li class="navbar__menu__item">Contact</li>
         </ul>
+
+        <button class="navbar__toggle-btn">
+            <i class="fas fa-bars"></i>
+        </button>
     </nav>
 
     <section id="home">
         <img src="img/profile.png" alt="Pis profile" class="home__profile">
-        <h1 class="home__title">안녕하세요, <br>밥값 하고 싶은 '프로그래머' 입니다.</h1>
+        <h1 class="home__title">안녕하세요, <br>밥값 하고 싶은 '코더' 입니다.</h1>
         <h3 class="home__description">시작하기에 가장 완벽한 곳은 바로 지금 당신이 있는 그곳이다.</h3>
         <button class="home__contact">CONTACT ME</button>
     </section>
@@ -156,40 +160,43 @@
     </section>
 
     <section id="work" class="section">
-        <h1>My work</h1>
-        <h3>Projects</h3>
-        <div class="work__categories">
-            <button class="category__btn active">All
-                <span class="category__count">6</span>
-            </button>
+        <div class="section__container">
+            <h1>My work</h1>
+            <h3>Projects</h3>
 
-            <button class="category__btn">Front-end
-                <span class="category__count">3</span>
-            </button>
+            <div class="work__categories">
+                <button class="category__btn active">All
+                    <span class="category__count">6</span>
+                </button>
 
-            <button class="category__btn">Back-end
-                <span class="category__count">3</span>
-            </button>
-        </div>
+                <button class="category__btn">Front-end
+                    <span class="category__count">3</span>
+                </button>
 
-        <div class="work__projects">
-            <!-- Git hub 주소 삽입 -->
-            <a href="https://github.com/altn0729/Mini-shopping" class="project" target="blank">
-                <!-- Project img 삽입 -->
-                <img src="img/MiniShopping.PNG" alt="mini-shopping" class="project__img">
-                <div class="project__description">
-                    <h3>Mini Shopping</h3>
-                    <span>아이콘에 해당하는 필터링 리스트</span>
-                </div>
-            </a>
+                <button class="category__btn">Back-end
+                    <span class="category__count">3</span>
+                </button>
+            </div>
 
-            <a href="https://github.com/altn0729/Mini-shopping" class="project" target="blank">
-                <img src="img/BrowserGame.PNG" alt=" browser-Game" class="project__img">
-                <div class="project__description">
-                    <h3>Browser Game</h3>
-                    <span>벌레를 피해 당근을 뽑는 게임</span>
-                </div>
-            </a>
+            <div class="work__projects">
+                <!-- Git hub 주소 삽입 -->
+                <a href="https://github.com/altn0729/Mini-shopping" class="project" target="blank">
+                    <!-- Project img 삽입 -->
+                    <img src="img/MiniShopping.PNG" alt="mini-shopping" class="project__img">
+                    <div class="project__description">
+                        <h3>Mini Shopping</h3>
+                        <span>아이콘에 해당하는 필터링 리스트</span>
+                    </div>
+                </a>
+
+                <a href="https://github.com/altn0729/Mini-shopping" class="project" target="blank">
+                    <img src="img/BrowserGame.PNG" alt=" browser-Game" class="project__img">
+                    <div class="project__description">
+                        <h3>Browser Game</h3>
+                        <span>벌레를 피해 당근을 뽑는 게임</span>
+                    </div>
+                </a>
+            </div>
         </div>
     </section>
 

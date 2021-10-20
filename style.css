@@ -135,6 +135,15 @@ button {
   border: 1px solid var(--color-white);
 }
 
+.navbar__toggle-btn {
+  position: absolute;
+  top: 22px;
+  right: 32px;
+  font-size: 24px;
+  color: var(--color-white);
+  display: none;
+}
+
 /* Home */
 #home {
   background: url("img/home-background.png") center/cover no-repeat;
@@ -345,7 +354,7 @@ button {
   justify-content: center;
   align-items: center;
   width: 280px;
-  height: 250px;
+  height: 230px;
   margin: 2px;
   background-color: var(--color-light-white);
 }
@@ -414,4 +423,39 @@ button {
   transform: scale(1.1);
   color: var(--color-dark-real-blue);
   transition: all var(--animation-duration) ease-in;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar__toggle-btn {
+    display: block;
+  }
+
+  #navbar {
+    flex-direction: column;
+    align-items: flext-start;
+  }
+
+  .navbar__menu {
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    display: none;
+  }
+
+  .about__majors {
+    flex-direction: column;
+  }
+
+  .major {
+    margin-bottom: 40px;
+  }
+
+  .skillset {
+    flex-direction: column;
+  }
+
+  .project {
+    /* 화면이 작아지면 알아서 화면을 채워준다. */
+    flex-grow: 1;
+  }
 }
