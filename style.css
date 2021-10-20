@@ -288,3 +288,45 @@ button {
 .etc {
   padding: 20px;
 }
+
+/* Work */
+.work__categories {
+  margin: 40px;
+}
+
+.category__btn {
+  border: 1px solid var(--color-dark-white);
+  border-radius: var(--size-border-radius);
+  font-size: var(--font-regular);
+  padding: 8px 48px;
+}
+
+.category__btn.active,
+.category__btn:hover {
+  background-color: var(--color-blue);
+  color: var(--color-white);
+}
+
+.category__btn.active .category__count,
+.category__btn:hover .category__count {
+  opacity: 1;
+  top: 0px;
+}
+
+.category__count {
+  background-color: var(--color-dark-blue);
+  color: var(--color-white);
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  /* span tag 라서 디스플레이 옵션 변경 */
+  display: inline-block;
+  line-height: 24px;
+
+  /* 카운트가 위에서 아래로 내려오는 동작 */
+  position: relative;
+  top: -20px;
+  left: 4px;
+  opacity: 0;
+  transition: all var(--animation-duration) ease-in;
+}
