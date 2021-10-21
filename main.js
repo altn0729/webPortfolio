@@ -1,12 +1,8 @@
 'use strict';
 
-
 // scroll시 navbar 상단 고정 및 배경 색깔 변경, 에니메이션
 const navbar = document.querySelector('#navbar');
 const navbarHeight = navbar.getBoundingClientRect().height;
-const homeSec = document.querySelector('#home');
-const homeHeight = homeSec.getBoundingClientRect().height;
-const profile = document.querySelector('.home__profile');
 
 document.addEventListener('scroll', () => {
     // console.log(`window.scrollY: ${window.scrollY}`);
@@ -17,12 +13,16 @@ document.addEventListener('scroll', () => {
     } else {
         navbar.classList.remove('navbar__background');
     }
+});
 
-    if (window.scrollY < homeHeight) {
-        profile.classList.add('transparent__background');
-    } else {
-        profile.classList.remove('transparent__background');
-    }
+
+// scroll시 home Section 자식 서서히 투명화
+const homeSec = document.querySelector('#home');
+const homeHeight = homeSec.getBoundingClientRect().height;
+const homeContainer = document.querySelector('.home__container');
+
+document.addEventListener('scroll', () => {
+    homeContainer.style.opacity = 1 - window.scrollY / homeHeight
 });
 
 
@@ -68,7 +68,7 @@ contactBtn.addEventListener('click', () => {
 
 // toggle 버튼 클릭 시 메뉴 바 Show or Hide
 const toggleBtn = document.querySelector('.navbar__toggle-btn');
-console.log(toggleBtn);
+// console.log(toggleBtn);
 
 toggleBtn.addEventListener('click', () => {
     console.log('click!');
@@ -79,5 +79,6 @@ toggleBtn.addEventListener('click', () => {
 // 해당 section 위치로 이동하는 함수
 function scrollIntoView(sectionName) {
     const scroll = document.querySelector(sectionName);
+
     scroll.scrollIntoView({behavior:'smooth', block:'center'});
 }
