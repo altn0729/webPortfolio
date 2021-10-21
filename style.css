@@ -162,6 +162,11 @@ button {
   padding-top: 120px;
 }
 
+.home__profile.transparent__background {
+  background-color: transparent;
+  transition: all var(--animation-duration) ease-in;
+}
+
 .home__profile {
   width: 250px;
   height: 325px;

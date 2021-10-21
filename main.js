@@ -1,24 +1,34 @@
 'use strict';
 
-const navbar = document.querySelector('#navbar');
-const navbarHeight = navbar.getBoundingClientRect().height;
-
-const navbarMenu = document.querySelector('.navbar__menu');
-console.log(navbarMenu);
 
 // scroll시 navbar 상단 고정 및 배경 색깔 변경, 에니메이션
+const navbar = document.querySelector('#navbar');
+const navbarHeight = navbar.getBoundingClientRect().height;
+const homeSec = document.querySelector('#home');
+const homeHeight = homeSec.getBoundingClientRect().height;
+const profile = document.querySelector('.home__profile');
+
 document.addEventListener('scroll', () => {
     // console.log(`window.scrollY: ${window.scrollY}`);
     // console.log(`navbarHeight: ${navbarHeight}`);
-
+    
     if (window.scrollY > navbarHeight) {
         navbar.classList.add('navbar__background');
     } else {
         navbar.classList.remove('navbar__background');
     }
+
+    if (window.scrollY < homeHeight) {
+        profile.classList.add('transparent__background');
+    } else {
+        profile.classList.remove('transparent__background');
+    }
 });
 
+
 // navbar에서 선택된 아이템 테두리 효과 및 선택된 아이템(Section) 위치로 이동
+const navbarMenu = document.querySelector('.navbar__menu');
+
 navbarMenu.addEventListener('click', (event) => {
     const activeItem = document.querySelector('.navbar__menu > .active');
     const activeValue = activeItem.dataset.value;
@@ -36,8 +46,7 @@ navbarMenu.addEventListener('click', (event) => {
         return;
     }
 
-    const selectedItem = document.querySelector(value);
-    selectedItem.scrollIntoView({behavior:'smooth', block:'center'});
+    scrollIntoView(value);
 
     if (activeValue === value) {
         target.classList.remove('active');
@@ -48,6 +57,16 @@ navbarMenu.addEventListener('click', (event) => {
     }
 });
 
+
+// Contact Me 버튼 클릭 시 contact Section으로 이동
+const contactBtn = document.querySelector('.home__contact');
+
+contactBtn.addEventListener('click', () => {
+    scrollIntoView('#contact');
+});
+
+
+// toggle 버튼 클릭 시 메뉴 바 Show or Hide
 const toggleBtn = document.querySelector('.navbar__toggle-btn');
 console.log(toggleBtn);
 
@@ -55,3 +74,10 @@ toggleBtn.addEventListener('click', () => {
     console.log('click!');
     navbarMenu.style.display = 'block';
 });
+
+
+// 해당 section 위치로 이동하는 함수
+function scrollIntoView(sectionName) {
+    const scroll = document.querySelector(sectionName);
+    scroll.scrollIntoView({behavior:'smooth', block:'center'});
+}
