@@ -17,9 +17,8 @@ document.addEventListener('scroll', () => {
 
 
 // scroll시 home Section 자식 서서히 투명화
-const homeSec = document.querySelector('#home');
-const homeHeight = homeSec.getBoundingClientRect().height;
 const homeContainer = document.querySelector('.home__container');
+const homeHeight = homeContainer.getBoundingClientRect().height;
 
 document.addEventListener('scroll', () => {
     homeContainer.style.opacity = 1 - window.scrollY / homeHeight
