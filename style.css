@@ -190,8 +190,8 @@ button {
 
 .scroll__up-btn {
   position: fixed;
-  right: 50px;
-  bottom: 50px;
+  right: 40px;
+  bottom: 40px;
   background-color: var(--color-dark-blue);
   color: var(--color-white);
   font-size: 40px;
@@ -199,6 +199,14 @@ button {
   width: 60px;
   height: 60px;
   opacity: 0;
+  transition: all var(--animation-duration) ease-in;
+  /* 투명도를 조절 해도 보이지만 않을 뿐 클릭이 될 수 있다. 그래서 클릭 이벤트를 비활성화 */
+  pointer-events: none;
+}
+
+.scroll__up-btn.show {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 /* About */

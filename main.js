@@ -16,18 +16,30 @@ document.addEventListener('scroll', () => {
 });
 
 
-// scroll시 home Section 자식 서서히 투명화
+
 const homeContainer = document.querySelector('.home__container');
 const homeHeight = homeContainer.getBoundingClientRect().height;
-const scrollUpBtn = document.querySelector('.scroll__up-btn');
 
 document.addEventListener('scroll', () => {
+    // scroll시 home Section 자식 서서히 투명화 
     homeContainer.style.opacity = 1 - window.scrollY / homeHeight
-    scrollUpBtn.style.opacity = window.scrollY / homeHeight;
 });
 
+
+const scrollUpBtn = document.querySelector('.scroll__up-btn');
+
+// scroll시 Arrow Button 보이게 활성화
+scrollUpBtn.addEventListener('scroll', () => {
+    if (window.scrollY > homeHeight / 2) {
+        scrollUpBtn.classList.add('show');
+    } else {
+        scrollUpBtn.classList.remove('show');
+    }
+});
+
+// 버튼 클릭시 Home section으로 이동
 scrollUpBtn.addEventListener('click', () => {
-    window.scrollTo = 0;
+    scrollIntoView('#home');
 });
 
 
