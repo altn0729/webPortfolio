@@ -19,9 +19,15 @@ document.addEventListener('scroll', () => {
 // scroll시 home Section 자식 서서히 투명화
 const homeContainer = document.querySelector('.home__container');
 const homeHeight = homeContainer.getBoundingClientRect().height;
+const scrollUpBtn = document.querySelector('.scroll__up-btn');
 
 document.addEventListener('scroll', () => {
     homeContainer.style.opacity = 1 - window.scrollY / homeHeight
+    scrollUpBtn.style.opacity = window.scrollY / homeHeight;
+});
+
+scrollUpBtn.addEventListener('click', () => {
+    window.scrollTo = 0;
 });
 
 
