@@ -29,7 +29,7 @@ document.addEventListener('scroll', () => {
 const scrollUpBtn = document.querySelector('.scroll__up-btn');
 
 // scroll시 Arrow Button 보이게 활성화
-scrollUpBtn.addEventListener('scroll', () => {
+document.addEventListener('scroll', () => {
     if (window.scrollY > homeHeight / 2) {
         scrollUpBtn.classList.add('show');
     } else {
@@ -75,14 +75,6 @@ navbarMenu.addEventListener('click', (event) => {
 });
 
 
-// Contact Me 버튼 클릭 시 contact Section으로 이동
-const contactBtn = document.querySelector('.home__contact');
-
-contactBtn.addEventListener('click', () => {
-    scrollIntoView('#contact');
-});
-
-
 // toggle 버튼 클릭 시 메뉴 바 Show or Hide
 const toggleBtn = document.querySelector('.navbar__toggle-btn');
 // console.log(toggleBtn);
@@ -98,4 +90,83 @@ function scrollIntoView(sectionName) {
     const scroll = document.querySelector(sectionName);
 
     scroll.scrollIntoView({behavior:'smooth', block:'center'});
+}
+
+
+// Contact Me 버튼 클릭 시 contact Section으로 이동
+const contactBtn = document.querySelector('.home__contact');
+
+contactBtn.addEventListener('click', () => {
+    scrollIntoView('#contact');
+});
+
+function loadItems() {
+    return fetch("data/data.json")
+        .then(response => response.json())
+        .then(json => json.items);
+}
+
+
+function createElement(items) {
+    const a = document.createElement('a');
+    a.setAttribute('class', 'project');
+    a.setAttribute('target', 'blank');
+    a.setAttribute('href', items.git);
+    a.setAttribute('data-type', items.type);
+
+    const img = document.createElement('img');
+    img.setAttribute('class', 'project__img');
+    img.setAttribute('src', items.image);
+    img.setAttribute('alt', items.alt);
+
+    const div = document.createElement('div');
+    div.setAttribute('class', 'project__description');
+
+    const title = document.createElement('h3');
+    title.innerHTML = `${items.title}`;
+
+    const des = document.createElement('span');
+    des.innerHTML = `${items.des}`;
+
+    div.appendChild(title);
+    div.appendChild(des);
+
+    a.appendChild(img);
+    a.appendChild(div);
+
+    return a;
+}
+
+
+loadItems()
+.then(items => {
+    console.log(items);
+    const elements = items.map(createElement);
+    const container = document.querySelector('.work__projects');
+    const categoryBtn = document.querySelector('.work__categories');
+
+    container.append(...elements);
+    
+    categoryBtn.addEventListener('click', event => onButtonClick(event, items, elements));
+})
+
+function onButtonClick(event, items, elements) {
+    const key = event.target.dataset.key;
+    const value = event.target.dataset.value;
+
+    if (key == null || value == null){
+        return;
+    }
+
+    updateCategory(key, value, elements);
+}
+
+function updateCategory(key, value, elements) {
+    elements.forEach(item => {
+        if(item.dataset[type] === value) {
+            item.classList.remove('invisible');
+        } else {
+            item.classList.add('invisible');
+        }
+    });
 }

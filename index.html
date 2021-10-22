@@ -44,7 +44,6 @@
         </button>
     </nav>
 
-    
     <section id="home">
         <div class="home__container">
             <img src="img/profile.png" alt="Pis profile" class="home__profile">
@@ -53,7 +52,7 @@
             <button class="home__contact">CONTACT ME</button>
         </div>
     </section>
-    
+
     <button class="scroll__up-btn">
         <i class="fas fa-arrow-up"></i>
     </button>
@@ -176,28 +175,28 @@
                     <span class="category__count">6</span>
                 </button>
 
-                <button class="category__btn">Front-end
+                <button class="category__btn" data-key="type" data-value="front">Front-end
                     <span class="category__count">3</span>
                 </button>
 
-                <button class="category__btn">Back-end
+                <button class="category__btn" data-key="type" data-value="back">Back-end
                     <span class="category__count">3</span>
                 </button>
             </div>
 
             <div class="work__projects">
                 <!-- Git hub 주소 삽입 -->
-                <a href="https://github.com/altn0729/Mini-shopping" class="project" target="blank">
+                <a href="https://github.com/altn0729/Mini-shopping" class="project" target="blank" data-type="front">
                     <!-- Project img 삽입 -->
-                    <img src="img/MiniShopping.PNG" alt="mini-shopping" class="project__img">
+                    <img src="projectImg/MiniShopping.PNG" alt="mini-shopping" class="project__img">
                     <div class="project__description">
                         <h3>Mini Shopping</h3>
                         <span>아이콘에 해당하는 필터링 리스트</span>
                     </div>
                 </a>
 
-                <a href="https://github.com/altn0729/BrowserGame" class="project" target="blank">
-                    <img src="img/BrowserGame.PNG" alt=" browser-Game" class="project__img">
+                <a href="https://github.com/altn0729/BrowserGame" class="project" target="blank" data-type="front">
+                    <img src="projectImg/BrowserGame.PNG" alt=" browser-Game" class="project__img">
                     <div class="project__description">
                         <h3>Browser Game</h3>
                         <span>벌레를 피해 당근을 뽑는 게임</span>
@@ -224,4 +223,5 @@
         <p class="contact__rights">Created in 2021</p>
     </seciton>
 </body>
+
 </html>
