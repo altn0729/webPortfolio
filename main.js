@@ -15,19 +15,6 @@ document.addEventListener('scroll', () => {
     }
 });
 
-
-
-const homeContainer = document.querySelector('.home__container');
-const homeHeight = homeContainer.getBoundingClientRect().height;
-
-document.addEventListener('scroll', () => {
-    // scroll시 home Section 자식 서서히 투명화 
-    homeContainer.style.opacity = 1 - window.scrollY / homeHeight
-});
-
-
-const scrollUpBtn = document.querySelector('.scroll__up-btn');
-
 // scroll시 Arrow Button 보이게 활성화
 document.addEventListener('scroll', () => {
     if (window.scrollY > homeHeight / 2) {
@@ -37,7 +24,23 @@ document.addEventListener('scroll', () => {
     }
 });
 
+// scroll시 home Section 자식 서서히 투명화 
+const homeContainer = document.querySelector('.home__container');
+const homeHeight = homeContainer.getBoundingClientRect().height;
+
+document.addEventListener('scroll', () => {
+    homeContainer.style.opacity = 1 - window.scrollY / homeHeight
+});
+
+// scrol시 섹션에 맞는 영역 navbar 활성화
+document.addEventListener('scroll', () => {
+
+});
+
+
 // 버튼 클릭시 Home section으로 이동
+const scrollUpBtn = document.querySelector('.scroll__up-btn');
+
 scrollUpBtn.addEventListener('click', () => {
     scrollIntoView('#home');
 });
@@ -63,6 +66,8 @@ navbarMenu.addEventListener('click', (event) => {
         return;
     }
 
+    navbarMenu.classList.remove('open');
+
     scrollIntoView(value);
 
     if (activeValue === value) {
@@ -80,8 +85,7 @@ const toggleBtn = document.querySelector('.navbar__toggle-btn');
 // console.log(toggleBtn);
 
 toggleBtn.addEventListener('click', () => {
-    console.log('click!');
-    navbarMenu.style.display = 'block';
+    navbarMenu.classList.toggle('open');
 });
 
 
@@ -100,73 +104,86 @@ contactBtn.addEventListener('click', () => {
     scrollIntoView('#contact');
 });
 
+
+// Projcet 상태 표시
+const categoryBtn = document.querySelector('.work__categories');
+const projectContainer = document.querySelector('.work__projects');
+
 function loadItems() {
     return fetch("data/data.json")
         .then(response => response.json())
         .then(json => json.items);
 }
 
-
-function createElement(items) {
-    const a = document.createElement('a');
-    a.setAttribute('class', 'project');
-    a.setAttribute('target', 'blank');
-    a.setAttribute('href', items.git);
-    a.setAttribute('data-type', items.type);
-
-    const img = document.createElement('img');
-    img.setAttribute('class', 'project__img');
-    img.setAttribute('src', items.image);
-    img.setAttribute('alt', items.alt);
-
-    const div = document.createElement('div');
-    div.setAttribute('class', 'project__description');
-
-    const title = document.createElement('h3');
-    title.innerHTML = `${items.title}`;
-
-    const des = document.createElement('span');
-    des.innerHTML = `${items.des}`;
-
-    div.appendChild(title);
-    div.appendChild(des);
-
-    a.appendChild(img);
-    a.appendChild(div);
-
-    return a;
-}
-
-
 loadItems()
 .then(items => {
-    console.log(items);
     const elements = items.map(createElement);
     const container = document.querySelector('.work__projects');
-    const categoryBtn = document.querySelector('.work__categories');
-
+    
     container.append(...elements);
     
-    categoryBtn.addEventListener('click', event => onButtonClick(event, items, elements));
+    categoryBtn.addEventListener('click', event => onButtonClick(event, elements));
 })
 
-function onButtonClick(event, items, elements) {
-    const key = event.target.dataset.key;
-    const value = event.target.dataset.value;
-
-    if (key == null || value == null){
+function createElement(items) {
+        const a = document.createElement('a');
+        a.setAttribute('class', 'project');
+        a.setAttribute('target', 'blank');
+        a.setAttribute('href', items.git);
+        a.setAttribute('data-type', items.type);
+    
+        const img = document.createElement('img');
+        img.setAttribute('class', 'project__img');
+        img.setAttribute('src', items.image);
+        img.setAttribute('alt', items.alt);
+    
+        const div = document.createElement('div');
+        div.setAttribute('class', 'project__description');
+    
+        const title = document.createElement('h3');
+        title.innerHTML = `${items.title}`;
+    
+        const des = document.createElement('span');
+        des.innerHTML = `${items.des}`;
+    
+        div.appendChild(title);
+        div.appendChild(des);
+    
+        a.appendChild(img);
+        a.appendChild(div);
+    
+        return a;
+}
+    
+function onButtonClick(event, elements) {
+    // 숫자 (span tag)를 클릭 시 필터 값이 나오지 않아 추가
+    const filter = event.target.dataset.filter || event.target.parentNode.dataset.filter;
+    const active = document.querySelector('.category__btn.active');
+    // target의 element가 button 타입이면 e.target(button tag) 아니면 e.target.parentNode(span tag)
+    const targetBtn = event.target.nodeName === 'BUTTON' ? event.target : event.target.parentNode;
+    
+    if (filter == null) {
         return;
     }
+    
+    active.classList.remove('active');
+    targetBtn.classList.add('active');
 
-    updateCategory(key, value, elements);
+    updateCategory(filter, elements);
 }
 
-function updateCategory(key, value, elements) {
-    elements.forEach(item => {
-        if(item.dataset[type] === value) {
-            item.classList.remove('invisible');
-        } else {
-            item.classList.add('invisible');
-        }
-    });
+function updateCategory(filter, elements) {
+    projectContainer.classList.add('animation-out');
+
+    setTimeout(() => {
+        elements.forEach(item => {
+            if (filter === 'all' || item.dataset.type === filter) {
+                item.classList.remove('invisible');
+            } else {
+                item.classList.add('invisible');
+            }
+
+            projectContainer.classList.remove('animation-out');
+        });
+    }, 300);
 }

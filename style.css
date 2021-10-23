@@ -106,11 +106,11 @@ button {
   position: fixed;
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   background-color: transparent;
   color: var(--color-white);
   align-items: center;
-  padding: 16px;
+  padding: 12px;
   transition: all var(--animation-duration) ease-in;
   /* navbar가 가장 위에 있어야 하기 때문에 순서 지정 */
   z-index: 1;
@@ -118,20 +118,26 @@ button {
 
 #navbar.navbar__background {
   background-color: var(--color-blue);
-  padding: 12px;
+  padding: 4px 12px;
 }
 
 .navbar__menu {
+  margin: 0px;
   display: flex;
 }
 
 .navbar__logo {
+  text-align: center;
   font-size: var(--font-medium);
   font-weight: var(--weight-semi-bold);
 }
 
+.fa-tools {
+  font-size: 26px;
+}
+
 .navbar__menu__item {
-  padding: 8px 12px;
+  padding: 5px 8px;
   margin: 0 4px;
   cursor: pointer;
   border-radius: var(--size-border-radius);
@@ -147,9 +153,9 @@ button {
 
 .navbar__toggle-btn {
   position: absolute;
-  top: 22px;
-  right: 32px;
-  font-size: 24px;
+  top: 18px;
+  right: 12px;
+  font-size: var(--font-medium);
   color: var(--color-white);
   display: none;
 }
@@ -198,6 +204,7 @@ button {
   border-radius: 50%;
   width: 60px;
   height: 60px;
+
   opacity: 0;
   transition: all var(--animation-duration) ease-in;
   /* 투명도를 조절 해도 보이지만 않을 뿐 클릭이 될 수 있다. 그래서 클릭 이벤트를 비활성화 */
@@ -207,6 +214,7 @@ button {
 .scroll__up-btn.show {
   opacity: 1;
   pointer-events: auto;
+  z-index: 1;
 }
 
 /* About */
@@ -344,7 +352,9 @@ button {
   border: 1px solid var(--color-dark-white);
   border-radius: var(--size-border-radius);
   font-size: var(--font-regular);
-  padding: 8px 48px;
+  width: 150px;
+  height: 40px;
+  /* padding: 8px 48px; */
 }
 
 .category__btn.active,
@@ -382,6 +392,14 @@ button {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  opacity: 1;
+  transition: all var(--animation-duration) ease-out;
+}
+
+.work__projects.animation-out {
+  opacity: 0;
+  transform: scale(0.95) translateY(40px);
+  transition: all var(--animation-duration) ease-out;
 }
 
 .project {
@@ -420,7 +438,7 @@ button {
 }
 
 .project__description h3 {
-  color: var(--color-white);
+  color: var(--color-orange);
 }
 
 .project__description h3:after {
@@ -429,9 +447,9 @@ button {
   display: block;
   position: relative;
   left: 50%;
-  width: 25px;
+  width: 50px;
   height: 2px;
-  margin-left: -12px;
+  transform: translateX(-50%);
   background-color: var(--color-dark-white);
 }
 
@@ -472,7 +490,12 @@ button {
 
   #navbar {
     flex-direction: column;
-    align-items: flext-start;
+    align-items: flex-start;
+    background-color: var(--color-blue);
+  }
+
+  #navbar.navbar__background {
+    padding: 12px;
   }
 
   .navbar__menu {
@@ -480,6 +503,10 @@ button {
     text-align: center;
     width: 100%;
     display: none;
+  }
+
+  .navbar__menu.open {
+    display: block;
   }
 
   .about__majors {
@@ -497,5 +524,9 @@ button {
   .project {
     /* 화면이 작아지면 알아서 화면을 채워준다. */
     flex-grow: 1;
+  }
+
+  .category__btn {
+    margin-bottom: 5px;
   }
 }
