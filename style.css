@@ -99,6 +99,7 @@ button {
   cursor: pointer;
   border: none;
   outline: none;
+  padding: 0;
 }
 
 /* Navbar */
@@ -132,10 +133,6 @@ button {
   font-weight: var(--weight-semi-bold);
 }
 
-.fa-tools {
-  font-size: 26px;
-}
-
 .navbar__menu__item {
   padding: 5px 8px;
   margin: 0 4px;
@@ -153,8 +150,8 @@ button {
 
 .navbar__toggle-btn {
   position: absolute;
-  top: 18px;
-  right: 12px;
+  top: 16px;
+  right: 16px;
   font-size: var(--font-medium);
   color: var(--color-white);
   display: none;
@@ -218,9 +215,6 @@ button {
 }
 
 /* About */
-#about {
-}
-
 .about__majors {
   display: flex;
   justify-content: space-between;
@@ -354,7 +348,7 @@ button {
   font-size: var(--font-regular);
   width: 150px;
   height: 40px;
-  /* padding: 8px 48px; */
+  position: relative;
 }
 
 .category__btn.active,
@@ -380,9 +374,9 @@ button {
   line-height: 24px;
 
   /* 카운트가 위에서 아래로 내려오는 동작 */
-  position: relative;
+  position: absolute;
   top: -20px;
-  left: 4px;
+  right: 4px;
   opacity: 0;
   transition: all var(--animation-duration) ease-in;
 }
@@ -483,7 +477,21 @@ button {
   transition: all var(--animation-duration) ease-in;
 }
 
+/* ------------Media------------- */
 @media screen and (max-width: 768px) {
+  /* Font size */
+  :root {
+    --font-large: 30px;
+    --font-medium: 18px;
+    --font-regular: 16px;
+    --font-small: 14px;
+    --font-micro: 12px;
+  }
+
+  .section {
+    padding: 16px;
+  }
+
   .navbar__toggle-btn {
     display: block;
   }
@@ -511,22 +519,32 @@ button {
 
   .about__majors {
     flex-direction: column;
+    margin: 30px 0px;
   }
 
   .major {
-    margin-bottom: 40px;
+    margin-bottom: 30px;
   }
 
   .skillset {
     flex-direction: column;
   }
 
+  .category__btn {
+    width: 100%;
+    margin-bottom: 5px;
+  }
   .project {
     /* 화면이 작아지면 알아서 화면을 채워준다. */
     flex-grow: 1;
   }
 
-  .category__btn {
-    margin-bottom: 5px;
+  .scroll__up-btn {
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    line-height: 50px;
+    right: 16px;
+    bottom: 16px;
   }
 }

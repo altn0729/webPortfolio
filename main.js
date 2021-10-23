@@ -32,11 +32,6 @@ document.addEventListener('scroll', () => {
     homeContainer.style.opacity = 1 - window.scrollY / homeHeight
 });
 
-// scrol시 섹션에 맞는 영역 navbar 활성화
-document.addEventListener('scroll', () => {
-
-});
-
 
 // 버튼 클릭시 Home section으로 이동
 const scrollUpBtn = document.querySelector('.scroll__up-btn');
@@ -46,16 +41,10 @@ scrollUpBtn.addEventListener('click', () => {
 });
 
 
-// navbar에서 선택된 아이템 테두리 효과 및 선택된 아이템(Section) 위치로 이동
+// navbar에서 선택된 아이템(Section) 위치로 이동
 const navbarMenu = document.querySelector('.navbar__menu');
 
 navbarMenu.addEventListener('click', (event) => {
-    const activeItem = document.querySelector('.navbar__menu > .active');
-    const activeValue = activeItem.dataset.value;
-
-    // console.log(`Active 상태인 li Tag: ${activeItem.innerHTML}`);
-    // console.log(`Active 상태인 아이템의 Tag의 value 값: ${activeValue}`);
-
     const target = event.target
     const value = target.dataset.value;
 
@@ -69,14 +58,6 @@ navbarMenu.addEventListener('click', (event) => {
     navbarMenu.classList.remove('open');
 
     scrollIntoView(value);
-
-    if (activeValue === value) {
-        target.classList.remove('active');
-        activeItem.classList.add('acitve');
-    } else {
-        activeItem.classList.remove('active');
-        target.classList.add('active');
-    }
 });
 
 
