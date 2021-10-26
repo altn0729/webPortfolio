@@ -9,7 +9,7 @@
             "des": "텍스트와 아이콘에 해당하는 필터링 기능"
         }, {
             "git": "https://github.com/altn0729/BrowserGame",
-            "type": "back",
+            "type": "front",
             "image": "./projectImg/MiniShopping.PNG",
             "alt": "browser-Game",
             "title": "Browser Game",

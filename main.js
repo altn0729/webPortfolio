@@ -33,6 +33,56 @@ document.addEventListener('scroll', () => {
 });
 
 
+// scroll시 nav Item 선택 및 위치 이동
+const sectionIds = ['#home', '#about', '#skills', '#work', '#contact'];
+const sections = sectionIds.map(id => document.querySelector(id));
+const navItems = sectionIds.map(id => document.querySelector(`[data-value="${id}"]`));
+
+let selectedNavIndex;
+let selectedNavItem = navItems[0];
+
+function selectNavItem(selected) {
+    selectedNavItem.classList.remove('active');
+    selectedNavItem = selected;
+    selectedNavItem.classList.add('active');
+}
+
+const observerOptions = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.3,
+}
+const observerCallback = (entries, observer) => {
+    entries.forEach(entry => {
+        if (!entry.isIntersecting && entry.intersectionRatio > 0) {
+            const index = sectionIds.indexOf(`#${entry.target.id}`);
+
+            if (entry.boundingClientRect.y < 0) {
+                // section이 바깥으로 나갈 때 마다 그 다음 section을 가르킨다.
+                selectedNavIndex = index + 1;
+            } else {
+                selectedNavIndex = index - 1;
+            }
+        }
+    });
+}
+const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+sections.forEach(section => observer.observe(section));
+
+window.addEventListener('wheel', () => {
+    if (window.scrollY === 0) {
+        // 스크롤이 가장 위에 위치하고 있으면 배열 0으로 초기화
+        selectedNavIndex = 0;
+    } else if (Math.round(window.scrollY + window.innerHeight) >= document.body.clientHeight) {
+        // 배열의 가장 마지막을 가르킨다.
+        selectedNavIndex = navItems.length - 1;
+    }
+
+    selectNavItem(navItems[selectedNavIndex]);
+});
+
+
 // 버튼 클릭시 Home section으로 이동
 const scrollUpBtn = document.querySelector('.scroll__up-btn');
 
@@ -74,7 +124,8 @@ toggleBtn.addEventListener('click', () => {
 function scrollIntoView(sectionName) {
     const scroll = document.querySelector(sectionName);
 
-    scroll.scrollIntoView({behavior:'smooth', block:'center'});
+    scroll.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    selectNavItem(navItems[sectionIds.indexOf(sectionName)]);
 }
 
 
