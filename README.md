@@ -18,10 +18,10 @@ Navbar에 있는 Item을 클릭해 해당하는 Section 위치로 이동하거�
 
 ## 주요 기능 ❗
 
-1️⃣ Navbar에 있는 Item 클릭 시 해당 Section 위치로 스크롤 이동
-2️⃣ Home, About, Skills, My work, Contact Section의 위치로 이동시 Navbar에 해당하는 Section item 테두리로 강조
-3️⃣ 우측 하단에 고정된 Arrow Up Button을 클릭 시 홈페이지 맨 위로 스크롤 이동
-4️⃣ JSON을 이용해 데이터 관리를 하고 My work Section에 프로젝트 썸네일 및 깃허브 주소 링크 생성
+1️⃣ Navbar에 있는 Item 클릭 시 해당 Section 위치로 스크롤 이동<br>
+2️⃣ Home, About, Skills, My work, Contact Section의 위치로 이동시 Navbar에 해당하는 Section item 테두리로 강조<br>
+3️⃣ 우측 하단에 고정된 Arrow Up Button을 클릭 시 홈페이지 맨 위로 스크롤 이동<br>
+4️⃣ JSON을 이용해 데이터 관리를 하고 My work Section에 프로젝트 썸네일 및 깃허브 주소 링크 생성<br>
 
 | 기능 설명 및 화면 구성                              |                  시연 영상                  |
 | --------------------------------------------------- | :-----------------------------------------: |
