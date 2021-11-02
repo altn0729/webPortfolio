@@ -24,10 +24,10 @@ Navbar에 있는 Item을 클릭해 해당하는 Section 위치로 이동하거�
 3️⃣ 우측 하단에 고정된 Arrow Up Button을 클릭 시 홈페이지 맨 위로 스크롤 이동<br>
 4️⃣ JSON을 이용해 데이터 관리를 하고 My work Section에 프로젝트 썸네일 및 깃허브 주소 링크 생성<br>
 
-| 기능 설명 및 화면 구성                            |                    시연 영상                    |
-| ------------------------------------------------- | :---------------------------------------------: |
-| ![alt Home](/img/readme/Home-description.PNG)     |    ![alt Home-gif](/img/readme/home-gif.gif)    |
-| ![alt About](/img/readme/About-description.PNG)   |   ![alt About-gif](/img/readme/about-gif.gif)   |
-| ![alt Skills](/img/readme/Skills-description.PNG) |                        X                        |
-| ![alt Work](/img/readme/Work-description.PNG)     |    ![alt Work-gif](/img/readme/work-gif.gif)    |
-| ![alt Cont](/img/readme/Contact-description.PNG)  | ![alt Contact-gif](/img/readme/contact-gif.gif) |
+| 기능 설명 및 화면 구성                              |                    시연 영상                    |
+| --------------------------------------------------- | :---------------------------------------------: |
+| ![alt Home](/img/readme/Home-description.PNG)       |    ![alt Home-gif](/img/readme/home-gif.gif)    |
+| ![alt About](/img/readme/About-description.PNG)     |   ![alt About-gif](/img/readme/about-gif.gif)   |
+| ![alt Skills](/img/readme/Skills-description.PNG)   |                        X                        |
+| ![alt Work](/img/readme/Work-description.PNG)       |    ![alt Work-gif](/img/readme/work-gif.gif)    |
+| ![alt Contact](/img/readme/contact-description.PNG) | ![alt Contact-gif](/img/readme/contact-gif.gif) |
