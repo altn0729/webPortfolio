@@ -2,11 +2,11 @@
 
 ## 프로젝트 소개 ❗
 
-HTML, CSS, JavaScript를 활용해 5가지 Section으로 나눈 간단한 반응형 웹 페이지를 만들어 보았습니다 😁
+HTML, CSS, JavaScript를 활용해 5가지 Section으로 나눈 간단한 반응형 웹 페이지를 만들어 보았습니다 😁<br>
 
-Section은 Home, About, Skills, My work, Contact로 나눠져 있으며, 각 세션에 맞는 저에 대한 소개와 기술력, 공부해 본 간단한 프로젝트들을 썸네일로 표현해 봤습니다.
+Section은 Home, About, Skills, My work, Contact로 나눠져 있으며, 각 세션에 맞는 저에 대한 소개와 기술력, 공부해 본 간단한 프로젝트들을 썸네일로 표현해 봤습니다.<br>
 
-Navbar에 있는 Item을 클릭해 해당하는 Section 위치로 이동하거나 깃허브에 업로드 된 프로젝트의 주소로 이동하는 기능이 있습니다.
+Navbar에 있는 Item을 클릭해 해당하는 Section 위치로 이동하거나 깃허브에 업로드 된 프로젝트의 주소로 이동하는 기능이 있습니다.<br>
 
 | Section Name |            Description             |
 | :----------- | :--------------------------------: |
@@ -24,10 +24,10 @@ Navbar에 있는 Item을 클릭해 해당하는 Section 위치로 이동하거�
 3️⃣ 우측 하단에 고정된 Arrow Up Button을 클릭 시 홈페이지 맨 위로 스크롤 이동<br>
 4️⃣ JSON을 이용해 데이터 관리를 하고 My work Section에 프로젝트 썸네일 및 깃허브 주소 링크 생성<br>
 
-| 기능 설명 및 화면 구성                              |                    시연 영상                    |
-| --------------------------------------------------- | :---------------------------------------------: |
-| ![alt Home](/img/readme/Home-description.PNG)       |    ![alt Home-gif](/img/readme/home-gif.gif)    |
-| ![alt About](/img/readme/About-description.PNG)     |   ![alt About-gif](/img/readme/about-gif.gif)   |
-| ![alt Skills](/img/readme/Skills-description.PNG)   |                        X                        |
-| ![alt Work](/img/readme/Work-description.PNG)       |    ![alt Work-gif](/img/readme/work-gif.gif)    |
-| ![alt Contact](/img/readme/Contact-description.PNG) | ![alt Contact-gif](/img/readme/contact-gif.gif) |
+| 기능 설명 및 화면 구성                            |                    시연 영상                    |
+| ------------------------------------------------- | :---------------------------------------------: |
+| ![alt Home](/img/readme/Home-description.PNG)     |    ![alt Home-gif](/img/readme/home-gif.gif)    |
+| ![alt About](/img/readme/About-description.PNG)   |   ![alt About-gif](/img/readme/about-gif.gif)   |
+| ![alt Skills](/img/readme/Skills-description.PNG) |                        X                        |
+| ![alt Work](/img/readme/Work-description.PNG)     |    ![alt Work-gif](/img/readme/work-gif.gif)    |
+| ![alt Cont](/img/readme/Contact-description.PNG)  | ![alt Contact-gif](/img/readme/contact-gif.gif) |
