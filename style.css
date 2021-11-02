@@ -318,7 +318,6 @@ button {
   background-color: var(--color-grey);
 }
 
-/* 여기서 지정할 경우 전부 지정이 돼 버리기 때문에 나중에 JSON 파일을 이용해 동적으로 변경할 것 */
 .skill__value {
   height: 3px;
   background-color: var(--color-orange);
