@@ -38,7 +38,7 @@ const sectionIds = ['#home', '#about', '#skills', '#work', '#contact'];
 const sections = sectionIds.map(id => document.querySelector(id));
 const navItems = sectionIds.map(id => document.querySelector(`[data-value="${id}"]`));
 
-let selectedNavIndex;
+let selectedNavIndex = 0;
 let selectedNavItem = navItems[0];
 
 function selectNavItem(selected) {
@@ -57,6 +57,7 @@ const observerCallback = (entries, observer) => {
         if (!entry.isIntersecting && entry.intersectionRatio > 0) {
             const index = sectionIds.indexOf(`#${entry.target.id}`);
 
+            // 스크롤이 아래로 향하게 되어 페이지가 올라온다.
             if (entry.boundingClientRect.y < 0) {
                 // section이 바깥으로 나갈 때 마다 그 다음 section을 가르킨다.
                 selectedNavIndex = index + 1;
@@ -70,15 +71,17 @@ const observer = new IntersectionObserver(observerCallback, observerOptions);
 
 sections.forEach(section => observer.observe(section));
 
+// selectNavItem이 반복적으로 호출되어서 wheel로 설정
 window.addEventListener('wheel', () => {
     if (window.scrollY === 0) {
         // 스크롤이 가장 위에 위치하고 있으면 배열 0으로 초기화
         selectedNavIndex = 0;
     } else if (Math.round(window.scrollY + window.innerHeight) >= document.body.clientHeight) {
         // 배열의 가장 마지막을 가르킨다.
-        selectedNavIndex = navItems.length - 1;
+        selectedNavIndex = navItems.length - 1; 
     }
-
+    
+    // console.log(navItems[selectedNavIndex]);
     selectNavItem(navItems[selectedNavIndex]);
 });
 
