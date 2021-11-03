@@ -1,11 +1,11 @@
-# HTML, CSS, JavaScript를 활용한 반응형 웹 포트폴리오 제작
+# HTML, CSS, JavaScript를 활용한 반응형 웹 포트폴리오
 
 ## 📄 프로젝트 소개
 
-HTML, CSS, JavaScript를 활용해 5가지 Section으로 나눈 간단한 반응형 웹 페이지를 만들어 보았습니다.<br>
+HTML, CSS, JavaScript를 활용해 5가지 Section으로 나눈 간단한 반응형 웹 페이지를 만들었고
+각 세션에는 저에 대한 간단한 소개와 기술력 그리고 공부해 본 프로젝트들을 썸네일로 표현했습니다.<br>
 
-각 세션에는 저에 대한 간단한 소개와 기술력, 공부해 본 프로젝트들을 썸네일로 표현한 자기소개 웹 포트폴리오이고
-Section은 Home, About, Skills, My work, Contact로 나눠져 구성되어 있습니다. <br>
+Section은 Home, About, Skills, My work, Contact로 나눠져 구성되어 있습니다.<br>
 
 Navbar에 있는 Item을 클릭해 해당하는 Section 위치로 이동하거나 깃허브에 업로드 된 프로젝트의 주소로 이동하는 기능이 있습니다 😁<br>
 
@@ -42,3 +42,11 @@ Navbar에 있는 Item을 클릭해 해당하는 Section 위치로 이동하거�
 | ![alt Skills](/img/readme/Skills-description.PNG)   |                                              X                                               |
 | ![alt Work](/img/readme/Work-description.PNG)       |                          ![alt Work-gif](/img/readme/work-gif.gif)                           |
 | ![alt Contact](/img/readme/contact-description.PNG) |                       ![alt Contact-gif](/img/readme/contact-gif.gif)                        |
+
+### 📱 모바일 화면
+
+|            모바일 화면 구성            |                                          |
+| :------------------------------------: | :--------------------------------------: |
+| ![alt Home-m](/img/readme/Home-m.PNG)  |   ![alt Home-m](/img/readme/Nav-m.PNG)   |
+| ![alt Home-m](/img/readme/About-m.PNG) | ![alt Home-m](/img/readme/Skills-m.PNG)  |
+| ![alt Home-m](/img/readme/Work-m.PNG)  | ![alt Home-m](/img/readme/Contact-m.PNG) |
