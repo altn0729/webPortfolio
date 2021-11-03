@@ -2,8 +2,8 @@
 
 ## 📄 프로젝트 소개
 
-HTML, CSS, JavaScript를 활용해 5가지 Section으로 나눈 간단한 반응형 웹 페이지를 만들었고
-각 세션에는 저에 대한 간단한 소개와 기술력 그리고 공부해 본 프로젝트들을 썸네일로 표현했습니다.<br>
+HTML, CSS, JavaScript를 활용해 5가지 Section으로 나눈 간단한 반응형 웹 페이지로
+각 Section에는 저에 대한 간단한 소개와 기술력 그리고 공부해 본 프로젝트들의 썸네일로 표현했습니다.<br>
 
 Section은 Home, About, Skills, My work, Contact로 나눠져 구성되어 있습니다.<br>
 
