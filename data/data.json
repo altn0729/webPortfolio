@@ -14,6 +14,13 @@
             "alt": "browser-Game",
             "title": "Browser Game",
             "des": "벌레를 피해 당근을 뽑는 게임"
+        }, {
+            "git": "https://github.com/altn0729/webPortfolio",
+            "type": "front",
+            "image": "./projectImg/WebPortfolio.PNG",
+            "alt": "web-Fortpolio",
+            "title": "Web Portfolio",
+            "des": "간단한 자기소개 반응형 웹"
         }
     ]
 }
