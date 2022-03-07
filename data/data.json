@@ -1,28 +1,36 @@
 {
-    "items": [
-        {
-            "git": "https://github.com/altn0729/Mini-shopping",
-            "type": "front",
-            "image": "./projectImg/MiniShopping.PNG",
-            "alt": "mini-shopping",
-            "title": "Mini Shopping",
-            "des": "텍스트와 아이콘에 해당하는 필터링 기능"
-        }, {
-            "git": "https://github.com/altn0729/BrowserGame",
-            "type": "front",
-            "image": "./projectImg/BrowserGame.PNG",
-            "alt": "browser-Game",
-            "title": "Browser Game",
-            "des": "벌레를 피해 당근을 뽑는 게임"
-        }, {
-            "git": "https://github.com/altn0729/webPortfolio",
-            "type": "front",
-            "image": "./projectImg/WebPortfolio.PNG",
-            "alt": "web-Fortpolio",
-            "title": "Web Portfolio",
-            "des": "간단한 자기소개 반응형 웹"
-        }
-    ]
+  "items": [
+    {
+      "git": "https://github.com/altn0729/Mini-shopping",
+      "type": "front",
+      "image": "./projectImg/MiniShopping.PNG",
+      "alt": "mini-shopping",
+      "title": "Mini Shopping",
+      "des": "텍스트와 아이콘에 해당하는 필터링 기능"
+    },
+    {
+      "git": "https://github.com/altn0729/BrowserGame",
+      "type": "front",
+      "image": "./projectImg/BrowserGame.PNG",
+      "alt": "browser-Game",
+      "title": "Browser Game",
+      "des": "벌레를 피해 당근을 뽑는 게임"
+    },
+    {
+      "git": "https://github.com/altn0729/webPortfolio",
+      "type": "front",
+      "image": "./projectImg/WebPortfolio.PNG",
+      "alt": "web-Fortpolio",
+      "title": "Web Portfolio",
+      "des": "간단한 자기소개 반응형 웹"
+    },
+    {
+      "git": "https://github.com/altn0729/React/tree/main/react-basic/youtube",
+      "type": "front",
+      "image": "./projectImg/youtubeClone.PNG",
+      "alt": "youtube-Clone",
+      "title": "Youtube Clone Coding",
+      "des": "Youtube APIs를 이용한 클론 코딩"
+    }
+  ]
 }
-
-
