@@ -39,7 +39,7 @@ Navbar에 있는 Item을 클릭해 해당하는 Section 위치로 이동하거�
 | ![alt Home](/img/readme/Home-description.PNG)       | ![alt Home-gif](/img/readme/home-gif.gif) <hr> ![alt Scroll-gif](/img/readme/scroll-gif.gif) |
 | ![alt Arrow](/img/readme/Arrow-description.PNG)     |                         ![alt Arrow-gif](/img/readme/arrow-gif.gif)                          |
 | ![alt About](/img/readme/About-description.PNG)     |                         ![alt About-gif](/img/readme/about-gif.gif)                          |
-| ![alt Skills](/img/readme/Skills-description.PNG)   |                                              X                                               |
+<!-- | ![alt Skills](/img/readme/Skills-description.PNG)   |                                              X                                               | -->
 | ![alt Work](/img/readme/Work-description.PNG)       |                          ![alt Work-gif](/img/readme/work-gif.gif)                           |
 | ![alt Contact](/img/readme/contact-description.PNG) |                       ![alt Contact-gif](/img/readme/contact-gif.gif)                        |
 
