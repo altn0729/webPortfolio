@@ -48,5 +48,5 @@ Navbar에 있는 Item을 클릭해 해당하는 Section 위치로 이동하거�
 |            모바일 화면 구성            |                                          |
 | :------------------------------------: | :--------------------------------------: |
 | ![alt Home-m](/img/readme/Home-m.PNG)  |   ![alt Home-m](/img/readme/Nav-m.PNG)   |
-| ![alt Home-m](/img/readme/About-m.PNG) | ![alt Home-m](/img/readme/Skills-m.PNG)  |
-| ![alt Home-m](/img/readme/Work-m.PNG)  | ![alt Home-m](/img/readme/Contact-m.PNG) |
+| ![alt Home-m](/img/readme/About-m.PNG) | ![alt Home-m](/img/readme/Work-m.PNG)  |
+| ![alt Home-m](/img/readme/Contact-m.PNG) |
