@@ -23,7 +23,7 @@ Navbar에 있는 Item을 클릭해 해당하는 Section 위치로 이동하거�
 | My work      | 기술력을 늘리기 위해 해본 프로젝트 |
 | Contact      |       연락처 및 Git hub 주소       |
 
-| <!--         |               Skills               | 본인이 생각하는 기술력 | --> |
+ <!--         |               Skills               | 본인이 생각하는 기술력 | -->
 
 ## 사용한 기술 ❗
 
@@ -58,6 +58,6 @@ Navbar에 있는 Item을 클릭해 해당하는 Section 위치로 이동하거�
 | :--------------------------------------: | :-----------------------------------: |
 |  ![alt Home-m](/img/readme/Home-m.PNG)   | ![alt Home-m](/img/readme/Nav-m.PNG)  |
 |  ![alt Home-m](/img/readme/About-m.PNG)  | ![alt Home-m](/img/readme/Work-m.PNG) |
-| ![alt Home-m](/img/readme/Contact-m.PNG) |
+| ![alt Home-m](/img/readme/Contact-m.PNG) |                   X                   |
 
 <!-- | ![alt Home-m](/img/readme/Skills-m.PNG) | -->
