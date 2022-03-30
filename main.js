@@ -19,6 +19,10 @@ document.addEventListener('scroll', () => {
 const homeContainer = document.querySelector('.home__container');
 const homeHeight = homeContainer.getBoundingClientRect().height;
 
+document.addEventListener('scroll', () => {
+  homeContainer.style.opacity = 1 - window.scrollY / homeHeight;
+});
+
 // 버튼 클릭시 Home section으로 이동
 const scrollUpBtn = document.querySelector('.scroll__up-btn');
 
@@ -35,10 +39,6 @@ document.addEventListener('scroll', () => {
   }
 });
 
-document.addEventListener('scroll', () => {
-  homeContainer.style.opacity = 1 - window.scrollY / homeHeight;
-});
-
 // scroll시 nav Item 선택 및 위치 이동
 const sectionIds = ['#home', '#about', '#work', '#contact'];
 const sections = sectionIds.map((id) => document.querySelector(id));
@@ -47,6 +47,7 @@ const navItems = sectionIds.map((id) => document.querySelector(`[data-value="${i
 let selectedNavIndex = 0;
 let selectedNavItem = navItems[0];
 
+// 선택시 Nav Active 활성화 전 요소 제거
 function selectNavItem(selected) {
   selectedNavItem.classList.remove('active');
   selectedNavItem = selected;
