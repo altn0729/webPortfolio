@@ -57,6 +57,7 @@ function selectNavItem(selected) {
 const observerOptions = {
   root: null,
   rootMargin: '0px',
+  // 대상 요소가 root에 지정된 요소 내에서 30% 만큼 보여질 때 콜백 실행
   threshold: 0.3,
 };
 
@@ -76,6 +77,8 @@ const observerCallback = (entries) => {
   });
 };
 
+// DOM의 속성, 텍스트, 자식 노드들에 대한 변경을 감지할 수 있는 API로
+// 특정 노드 객체를 관찰하고, 변경이 발생했을 때 콜백 함수를 실행
 const observer = new IntersectionObserver(observerCallback, observerOptions);
 
 sections.forEach((section) => observer.observe(section));
