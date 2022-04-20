@@ -107,10 +107,12 @@ navbarMenu.addEventListener('click', (event) => {
   // console.log(`선택된 아이템 li Tag: ${target.innerHTML}`);
   // console.log(`선택된 아이템의 Tag value 값: ${value}`);
 
+  // 선택된 값이 없을 경우 즉시 종료
   if (value == null) {
     return;
   }
 
+  // Media CSS navbar 블록 처리
   navbarMenu.classList.remove('open');
 
   scrollIntoView(value);

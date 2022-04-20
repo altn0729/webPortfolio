@@ -20,7 +20,7 @@
       "git": "https://github.com/altn0729/webPortfolio",
       "type": "front",
       "image": "./projectImg/WebPortfolio.PNG",
-      "alt": "web-Fortpolio",
+      "alt": "web-portpolio",
       "title": "Web Portfolio",
       "des": "간단한 자기소개 반응형 웹"
     },
@@ -30,7 +30,7 @@
       "image": "./projectImg/youtubeClone.PNG",
       "alt": "youtube-Clone",
       "title": "Youtube Clone Coding",
-      "des": "Youtube APIs를 이용한 클론 코딩"
+      "des": "Youtube REST APIs를 이용한 클론 코딩"
     }
   ]
 }
